@@ -13,7 +13,13 @@ export default function PokemonGrid({ list, total }) {
     const index = rowIndex * columnCount + columnIndex;
     return (
       index < totalCount && (
-        <PokemonGridTile {...{ index, style, ...list[index] }} />
+        <PokemonGridTile
+          {...{
+            key: index,
+            style,
+            ...list[index],
+          }}
+        />
       )
     );
   };
@@ -27,18 +33,16 @@ export default function PokemonGrid({ list, total }) {
           return (
             <Grid
               {...{
+                useIsScrolling: true,
                 height,
                 width,
-                //Cantidad de elementos
                 rowCount,
                 columnCount,
-                //Dimensiones de elemento
                 columnWidth,
                 rowHeight: columnWidth,
+                children: Cell,
               }}
-            >
-              {Cell}
-            </Grid>
+            />
           );
         }}
       </AutoSizer>

@@ -20,6 +20,7 @@
     "react-scripts": "4.0.1",
     "react-virtualized-auto-sizer": "^1.0.2",
     "react-window": "^1.8.6",
+    "react-window-scroller": "^1.0.10",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.1.3",

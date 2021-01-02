@@ -1,4 +1,4 @@
-export const pokemonTypeColor = (name) => {
+export const pokemonTypeColor = () => {
   return {
     normal: { color: "#A8A878", border: "#6D6D4E" },
     fighting: { color: "#C03028", border: "#7D1F1A" },

@@ -43,6 +43,7 @@ export function useFetch(url) {
     const fetchData = async () => {
       localDispatch({ type: "INIT" });
       if (cache.current[url]) {
+        console.log("cache");
         localDispatch({ type: "FETCH_SUCCESS", payload: cache.current[url] });
       } else {
         try {

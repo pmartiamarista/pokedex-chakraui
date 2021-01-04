@@ -42,19 +42,14 @@ export function useFetch(url) {
     let cancelRequest = false;
     const fetchData = async () => {
       localDispatch({ type: "INIT" });
-      if (cache.current[url]) {
-        console.log("cache");
-        localDispatch({ type: "FETCH_SUCCESS", payload: cache.current[url] });
-      } else {
-        try {
-          const response = await instance.get(url);
-          cache.current[url] = response.data;
-          if (cancelRequest) return;
-          localDispatch({ type: "FETCH_SUCCESS", payload: response.data });
-        } catch (error) {
-          if (cancelRequest) return;
-          localDispatch({ type: "FETCH_FAILED" });
-        }
+      try {
+        const response = await instance.get(url);
+        cache.current[url] = response.data;
+        if (cancelRequest) return;
+        localDispatch({ type: "FETCH_SUCCESS", payload: response.data });
+      } catch (error) {
+        if (cancelRequest) return;
+        localDispatch({ type: "FETCH_FAILED" });
       }
     };
     fetchData();

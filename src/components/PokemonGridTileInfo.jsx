@@ -3,9 +3,10 @@ import { Box, Heading, Flex, Spacer } from "@chakra-ui/react";
 
 import PokemonTypeTag from "./PokemonTypeTag";
 import PokemonImg from "./PokemonImg";
+import FlexRowWrapper from "./wrappers/FlexRowWrapper";
+// import PokemonStats from "./PokemonStats";
 
 const PokemonGridTileInfo = ({ style, data }) => {
-  // console.log(data);
   return useMemo(
     () => (
       <Flex h={style.height} flexDirection="column" p={2}>
@@ -25,14 +26,26 @@ const PokemonGridTileInfo = ({ style, data }) => {
         </Box>
         <Spacer />
         <Flex
-          flexDirection="row"
-          p={0.5}
+          flexDirection="column"
           justifyContent="center"
           alignContent="center"
         >
-          {data.types.map(({ type: { url, name } }) => (
-            <PokemonTypeTag {...{ key: name, name, url }} />
-          ))}
+          {/* {FlexRowWrapper(
+            data.stats.map(({ stat, ...rest }) => (
+              <PokemonStats
+                {...{
+                  key: stat.name,
+                  name: stat.name,
+                  value: rest.base_stat,
+                }}
+              />
+            ))
+          )} */}
+          {FlexRowWrapper(
+            data.types.map(({ type: { url, name } }) => (
+              <PokemonTypeTag {...{ key: name, name, url }} />
+            ))
+          )}
         </Flex>
       </Flex>
     ),

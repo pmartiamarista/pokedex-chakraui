@@ -1,4 +1,3 @@
-import React from "react";
 import { Link as RouteLink, useLocation } from "react-router-dom";
 import {
   Drawer,
@@ -14,11 +13,11 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-export default function Sidebar({ isDrawerOpen, openCloseDrawer, Routes }) {
+export default function Sidebar({ onClose, isOpen, Routes }) {
   const { pathname } = useLocation();
 
   return (
-    <Drawer isOpen={isDrawerOpen} placement="right" onClose={openCloseDrawer}>
+    <Drawer {...{ isOpen, onClose }} placement="right">
       <DrawerOverlay>
         <DrawerContent>
           <DrawerCloseButton />

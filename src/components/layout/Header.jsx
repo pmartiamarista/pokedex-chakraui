@@ -1,7 +1,8 @@
 import { Heading, Flex, Box, IconButton } from "@chakra-ui/react";
 import { MdMenu } from "react-icons/md";
 
-export default function Header({ openCloseDrawer }) {
+export default function Header({ onOpen }) {
+
   return (
     <Flex
       as="header"
@@ -18,7 +19,7 @@ export default function Header({ openCloseDrawer }) {
         </Heading>
       </Flex>
       <Box
-        onClick={openCloseDrawer}
+        onClick={onOpen}
         display={{
           base: "block",
           // md: "none"

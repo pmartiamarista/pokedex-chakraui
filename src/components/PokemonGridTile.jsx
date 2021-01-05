@@ -2,7 +2,6 @@ import { Box, Skeleton } from "@chakra-ui/react";
 import { useFetch } from "hooks/useFetch";
 
 import PokemonGridTileInfo from "./PokemonGridTileInfo";
-import { pokemonTypeColor } from "utils/type-color";
 
 export default function PokemonGridTile({ style, url }) {
   const { status, data } = useFetch(url);
@@ -12,7 +11,7 @@ export default function PokemonGridTile({ style, url }) {
       style={{
         ...style,
         textAlign: "center",
-        borderColor: data.types ? pokemonTypeColor()[data.types[0].type.name].border : '#fcfcfc',
+        borderColor: "#000",
         borderWidth: 1.5,
         borderRadius: 8,
       }}
@@ -24,9 +23,7 @@ export default function PokemonGridTile({ style, url }) {
           width: style.width,
         }}
       >
-        {status === "success" && (
-          <PokemonGridTileInfo {...{ style, data }} />
-        )}
+        {status === "success" && <PokemonGridTileInfo {...{ style, data }} />}
       </Skeleton>
     </Box>
   );

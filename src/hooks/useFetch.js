@@ -36,7 +36,7 @@ const reducerLayout = (state, action) => {
 
 export function useFetch(url) {
   const cache = useRef({});
-  const [state, localDispatch] = useReducer(reducerLayout, { ...initState });
+  const [state, localDispatch] = useReducer(reducerLayout, initState);
 
   useEffect(() => {
     let cancelRequest = false;
@@ -55,6 +55,7 @@ export function useFetch(url) {
     fetchData();
     return () => {
       cancelRequest = true;
+      localDispatch({ type: "CLEAN" });
     };
   }, [url]);
 

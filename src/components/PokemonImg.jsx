@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Image } from "@chakra-ui/react";
 import notFound from "assets/Unown.png";
 
@@ -12,4 +13,4 @@ const PokemonImg = ({ image, height, ...props }) => (
   />
 );
 
-export default PokemonImg;
+export default memo(PokemonImg);

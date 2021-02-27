@@ -32,8 +32,8 @@ export default function PokemonGrid({ list, total }) {
               {...{
                 key: index,
                 style: {
-                  height: style.height / 1.001,
-                  width: style.width / 1.001,
+                  height: style.height * 0.995,
+                  width: style.width * 0.995,
                 },
                 ...list[index],
               }}

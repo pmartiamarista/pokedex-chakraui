@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useMemo } from "react";
 import { FixedSizeGrid as Grid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
@@ -21,7 +21,6 @@ export default function PokemonGrid({ list, total }) {
   });
   const getColumnWidth = (width) => Math.ceil(width / columnCount);
   const getRowCount = () => Math.ceil(total / columnCount);
-  const gridRef = useRef();
 
   const GridCell = ({ columnIndex, rowIndex, style }) =>
     useMemo(() => {
@@ -44,8 +43,6 @@ export default function PokemonGrid({ list, total }) {
       );
     }, [columnIndex, rowIndex, style]);
 
-  console.log(gridRef);
-
   return (
     <Box h={"90vh"}>
       <AutoSizer>
@@ -53,7 +50,6 @@ export default function PokemonGrid({ list, total }) {
           return (
             <Grid
               {...{
-                ref: gridRef,
                 useIsScrolling: true,
                 height,
                 width,

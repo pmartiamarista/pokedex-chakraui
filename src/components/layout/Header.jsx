@@ -1,7 +1,9 @@
-import { Heading, Flex, Box, IconButton } from "@chakra-ui/react";
-import { MdMenu } from "react-icons/md";
+import { memo } from 'react';
+import { Heading, Flex } from "@chakra-ui/react";
 
-export default function Header({ onOpen }) {
+
+
+export default memo(function Header() {
 
   return (
     <Flex
@@ -14,24 +16,10 @@ export default function Header({ onOpen }) {
       color="white"
     >
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
-          Pokémon
+        <Heading as="h1" size="lg" >
+          Pokémon List
         </Heading>
       </Flex>
-      <Box
-        onClick={onOpen}
-        display={{
-          base: "block",
-          // md: "none"
-        }}
-      >
-        <IconButton
-          variant="outline"
-          colorScheme="red.500"
-          fontSize="20px"
-          icon={<MdMenu />}
-        />
-      </Box>
     </Flex>
   );
-}
+})

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Stat, StatLabel, StatNumber } from "@chakra-ui/react";
 import { pokemonStatName } from "utils/stat-name";
 
@@ -14,4 +15,4 @@ const PokemonStats = ({ name, value }) => {
   );
 };
 
-export default PokemonStats;
+export default memo(PokemonStats);

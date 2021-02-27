@@ -28,17 +28,6 @@ const PokemonGridTileInfo = ({ style, data }) => {
         justifyContent="center"
         alignContent="center"
       >
-        {/* {FlexRowWrapper(
-            data.stats.map(({ stat, ...rest }) => (
-              <PokemonStats
-                {...{
-                  key: stat.name,
-                  name: stat.name,
-                  value: rest.base_stat,
-                }}
-              />
-            ))
-          )} */}
         {FlexRowWrapper(
           data.types.map(({ type: { url, name } }) => (
             <PokemonTypeTag {...{ key: name, name, url }} />

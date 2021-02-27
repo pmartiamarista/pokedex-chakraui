@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Tag } from "@chakra-ui/react";
 import { pokemonTypeColor } from "utils/type-color";
 
@@ -19,4 +20,4 @@ const PokemonTypeTag = ({ name }) => (
   </Tag>
 );
 
-export default PokemonTypeTag;
+export default memo(PokemonTypeTag);

@@ -5,11 +5,10 @@ import { fetchTotalPokemon } from "redux/actions/general-list-actions";
 import { fetchPokemonTypes } from "redux/actions/type-list-actions";
 
 function List({ dispatch, generalList: { isFetching, list, total } }) {
-
   useEffect(() => {
     dispatch(fetchPokemonTypes());
     dispatch(fetchTotalPokemon());
-    return () => { };
+    return () => {};
   }, [dispatch]);
 
   return isFetching ? null : <PokemonGrid {...{ list, total }} />;
@@ -21,4 +20,4 @@ const mapStateToProps = ({ generalList }) => {
   };
 };
 
-export default List = connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(List);

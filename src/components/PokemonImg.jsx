@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from "react";
 import { Image } from "@chakra-ui/react";
 import notFound from "assets/Unown.png";
 

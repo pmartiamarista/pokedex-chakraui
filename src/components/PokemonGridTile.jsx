@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Skeleton } from "@chakra-ui/react";
 import { useFetch } from "hooks/useFetch";
 

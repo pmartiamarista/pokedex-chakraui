@@ -1,5 +1,6 @@
+import React, { useEffect } from "react";
+
 import PokemonGrid from "components/PokemonGrid";
-import { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchTotalPokemon } from "redux/actions/general-list-actions";
 import { fetchPokemonTypes } from "redux/actions/type-list-actions";

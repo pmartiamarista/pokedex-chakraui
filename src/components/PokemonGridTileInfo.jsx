@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Heading, Flex, Spacer } from "@chakra-ui/react";
 
 import PokemonTypeTag from "./PokemonTypeTag";

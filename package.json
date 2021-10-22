@@ -17,7 +17,7 @@
     "react-parallax": "^3.1.2",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.3",
     "react-virtualized-auto-sizer": "^1.0.2",
     "react-window": "^1.8.6",
     "react-window-scroller": "^1.0.10",
@@ -28,9 +28,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.3.0",
+    "craco-esbuild": "^0.4.2"
   }
 }

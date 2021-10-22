@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from "react";
 import { Stat, StatLabel, StatNumber } from "@chakra-ui/react";
 import { pokemonStatName } from "utils/stat-name";
 

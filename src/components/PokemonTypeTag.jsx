@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from "react";
 import { Tag } from "@chakra-ui/react";
 import { pokemonTypeColor } from "utils/type-color";
 

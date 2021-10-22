@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import React, { lazy } from "react";
 import { Icon } from "@chakra-ui/react";
 import { MdList } from "react-icons/md";
 

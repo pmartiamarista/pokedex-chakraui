@@ -1,4 +1,4 @@
-import { createElement } from "react";
+import React, { createElement } from "react";
 import Layout from "layout/Layout";
 import { HashRouter, Route, Switch } from "react-router-dom";
 

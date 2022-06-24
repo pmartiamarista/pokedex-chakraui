@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Skeleton } from "@chakra-ui/react";
-import { useFetch } from "hooks/useFetch";
 
 import PokemonGridTileInfo from "./PokemonGridTileInfo";
+import { useFetchPokemon } from "hooks/useFetchPokemon";
 
-export default function PokemonGridTile({ style, url }) {
-  const { status, data } = useFetch(url);
+export default function PokemonGridTile({ style, url, name }) {
+  const { status, data } = useFetchPokemon({url, name});
 
   return (
     <Box

@@ -7,6 +7,10 @@ import FlexRowWrapper from "./wrappers/FlexRowWrapper";
 // import PokemonStats from "./PokemonStats";
 
 const PokemonGridTileInfo = ({ style, data }) => {
+
+
+
+
   return (
     <Flex h={style.height} flexDirection="column" p={2}>
       <Box alignSelf="center" p={1}>
